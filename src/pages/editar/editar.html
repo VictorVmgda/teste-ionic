@@ -1,0 +1,47 @@
+<ion-content padding>
+
+    <form [formGroup]="formEditar" (ngSubmit)="atualizar()">
+
+        <figure>
+            <img [src]="usuario.foto" alt="{{ usuario.nome || 'Foto indefinida' }}">
+            <button ion-button color="dark" *ngIf="mobile == true" class="foto-button" type="button" (click)="uploadImage()">
+                <ion-icon name="camera"></ion-icon>
+            </button>
+            <div *ngIf="mobile == false" class="webcamera-div">
+                <label ion-button color="dark" for="inputFile">
+                    <ion-icon name="camera"></ion-icon>
+                </label>
+                <input type="file" accept="image/jpeg" id="inputFile" (change)="uploadImageWeb($event)" style="visibility: hidden;">
+            </div>
+        </figure>
+        
+        <div>
+            <ion-item>
+                <ion-label floating>Nome: </ion-label>
+                <ion-input name="nome" formControlName="nome" [(ngModel)]="usuario.nome"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label floating>Login: </ion-label>
+                <ion-input name="login" formControlName="login" [(ngModel)]="usuario.login"></ion-input>
+            </ion-item>
+            
+            <ion-item>
+                <ion-label floating>E-mail: </ion-label>
+                <ion-input type="email" name="email" formControlName="email" [(ngModel)]="usuario.email"></ion-input>
+            </ion-item>
+            
+            <button ion-button (click)="irMudarSenha()" type="button" color="dark">Mudar Senha</button>
+
+        </div>
+
+
+        <ion-fab bottom rigth class="fixed">
+            <button ion-fab color="dark" type="submit" [disabled]="formEditar.invalid">
+                <ion-icon name="add-circle"></ion-icon>
+            </button>
+        </ion-fab>
+        
+    </form>
+
+</ion-content>

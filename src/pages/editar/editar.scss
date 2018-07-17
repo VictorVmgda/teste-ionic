@@ -1,0 +1,66 @@
+page-editar {
+    form{
+    
+        @media screen and (min-width: $large) {
+            display: flex;
+        }
+
+        div{
+            @media screen and (min-width: $large) {
+                width: 65%;
+                line-height: 5vh;
+            }
+
+            button{
+                @media screen and (min-width: $large) {
+                    float: right;
+                }
+            }
+
+        }
+
+        figure{
+
+            img{
+                width: 100%;
+                position: relative;
+                height: 45vh;
+
+                @media screen and (min-width: $large) {
+                    @include imageLargeLayout();
+                }
+            }
+
+            button{
+                position: relative;
+                bottom: 3vh;
+            }
+
+            div.webcamera-div{
+
+                position: relative;
+                bottom: 25px;
+                float: right;
+                
+                @media screen and (min-width: $large) {
+                    float: none;
+                }
+
+                label{
+                    float: right;
+                    @media screen and (min-width: $large) {
+                        float: none;
+                    }
+                }
+
+            }
+
+        }
+
+        ion-fab.fixed{
+            position: fixed;
+            bottom: 75px !important;
+            right: 10px;
+        }
+    }
+}

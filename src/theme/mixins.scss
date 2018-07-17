@@ -1,0 +1,23 @@
+
+@mixin imageLargeLayout(){
+    position: relative;
+    height: 75vh;
+    width: 45vw;
+}
+
+@mixin divFlexWithForm(){
+    width: 65%;
+    line-height: 5vh;
+}
+
+@mixin titlePage(){
+    margin-top: 5vh !important;
+    color: #808080; 
+    font-size: 3em;
+}
+
+@mixin formDataPage(){
+    width: 50vw;
+    margin: 5vh auto;
+    text-align: center;
+}

@@ -1,0 +1,44 @@
+page-perfil {
+
+    main{
+
+        @media screen and (min-width: $large) {
+            display: flex;
+            flex-flow: row;
+        }
+    
+        div.perfil-info{
+            @media screen and (min-width: $large) {
+                @include divFlexWithForm();
+                display: flex;
+                flex-flow: column;
+                justify-content: space-between;
+            }
+
+            ion-item h2, ion-item p{
+                @media screen and (min-width: $large) {
+                    line-height: 8vh;
+                }   
+            }
+
+            button{
+                @media screen and (min-width: $large) {
+                    width: 50%;
+                    margin: 0 auto;
+                }
+            }
+
+        }
+
+        figure{
+            img{   
+                @media screen and (min-width: $large) {
+                    @include imageLargeLayout();
+                }
+            }
+        }
+
+    }
+
+
+}

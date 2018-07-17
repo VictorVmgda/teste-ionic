@@ -1,0 +1,24 @@
+page-principal {
+    
+    main{
+
+        @media screen and (min-width: $large) {
+            display: flex;
+            flex-flow: row wrap; 
+            justify-content: space-around;
+        }
+    
+        ion-item{
+            img{
+                width: 100%;
+                height: 40vh;
+            }
+            
+            @media screen and (min-width: $large) {
+                width: 25vw !important;
+            }
+    
+        }
+    }
+
+}

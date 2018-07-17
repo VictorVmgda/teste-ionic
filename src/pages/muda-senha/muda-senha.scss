@@ -1,0 +1,18 @@
+page-muda-senha {
+
+    form{
+        h2{
+            @include titlePage();
+        }
+
+        @media screen and (min-width: $large) {
+            @include formDataPage();
+        }
+
+        ion-item *{
+            line-height: 5vh;
+        }
+
+    }
+
+}

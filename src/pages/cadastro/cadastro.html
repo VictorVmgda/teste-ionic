@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      Ion Projeto
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h2 text-center>Insira seus dados</h2>
+
+<form [formGroup]="formCadastro" (ngSubmit)="cadastrar()">
+
+  <figure>
+    <img [src]="usuario.foto" alt="Foto indefinida">
+    <button ion-button color="dark" class="foto-button" *ngIf="mobile == true" type="button" (click)="uploadImage()">
+      <ion-icon name="camera"></ion-icon>
+    </button>
+    <div *ngIf="mobile == false" class="webcamera-div">
+        <label ion-button color="dark" for="inputFile">
+            <ion-icon name="camera"></ion-icon>
+        </label>
+        <input type="file" accept="image/jpeg" id="inputFile" (change)="uploadImageWeb($event)" style="visibility: hidden;"/>
+    </div>
+  </figure>
+
+  <div>
+
+    
+    <ion-item>
+      <ion-label floating>Nome: </ion-label>
+      <ion-input name="nome" formControlName="nome" [(ngModel)]="usuario.nome"></ion-input>
+      <span *ngIf="formCadastro.controls.nome.invalid" color="danger">Título inválido!</span>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Login: </ion-label>
+      <ion-input name="login" formControlName="login" [(ngModel)]="usuario.login"></ion-input>
+      <span *ngIf="formCadastro.controls.login.invalid" color="danger">Login inválido!</span>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>E-mail: </ion-label>
+      <ion-input type="email" formControlName="email" name="email" [(ngModel)]="usuario.email"></ion-input>
+      <span *ngIf="formCadastro.controls.email.invalid" color="danger">E-mail inválido</span>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Senha: </ion-label>
+      <ion-input type="password" formControlName="senha" name="senha" [(ngModel)]="usuario.senha"></ion-input>
+      <span *ngIf="formCadastro.controls.senha.invalid" color="danger">Senha inválida</span>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Confirme sua senha: </ion-label>
+      <ion-input type="password" formControlName="csenha" name="csenha" [(ngModel)]="usuario.csenha"></ion-input>
+      <span *ngIf="formCadastro.controls.csenha.invalid" color="danger">As senhas não correspondem</span>
+    </ion-item>
+    
+  </div>
+    
+    <ion-fab bottom right>
+    <button ion-fab color="dark" type="submit" [disabled]="formCadastro.invalid">
+      <ion-icon name="add-circle"></ion-icon>
+    </button>
+  </ion-fab>
+
+</form>
+
+</ion-content>

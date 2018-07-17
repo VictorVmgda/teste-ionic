@@ -1,0 +1,13 @@
+<ion-content>
+
+  <main>
+    
+    <ion-item *ngFor="let u of usuarios" (click)="verPerfil(u.id)">
+      <img src="{{u.foto}}" alt="Foto do {{u.nome}}"/>
+      <h4 text-center>{{ u.nome }}</h4>
+    </ion-item>
+
+  </main>
+
+
+</ion-content>

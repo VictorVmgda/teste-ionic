@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      Ion Projeto
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only type="button" (click)="logout()" title="Sair">
+        <ion-icon name="exit"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+ 
+  <ion-tabs color="dark" selectedIndex="0">
+    <ion-tab tabIcon="person" [root]="usersView" tabTitle="{{ mobile ? '': 'Ver usuários'}}"></ion-tab>
+    <ion-tab tabIcon="create" [root]="userEdit" tabTitle="{{ mobile ? '': 'Editar perfil'}}"></ion-tab>
+    <ion-tab tabIcon="md-contact" [root]="userProfile" tabTitle="{{ mobile ? '': 'Ver perfil'}}"></ion-tab>
+
+  </ion-tabs>
+
+</ion-content>

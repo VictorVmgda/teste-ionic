@@ -1,0 +1,61 @@
+page-cadastro {
+    form{
+    
+        ion-fab{
+            position: fixed;
+            bottom: 15px;
+            right: 0;
+        }
+
+        @media screen and (min-width: $large) {
+            display: flex;  
+        }
+
+        div{
+            @media screen and (min-width: $large) {
+                @include divFlexWithForm();
+            }
+        }
+
+        figure {
+
+            img{
+                
+                @media screen and (min-width: $large) {
+                    @include imageLargeLayout();
+                }
+            }
+
+            button.foto-button{
+                position: relative;
+                float: right;
+                bottom: 25px;
+
+            }
+
+            div.webcamera-div{
+
+                position: relative;
+                bottom: 25px;
+                float: right;
+                
+                @media screen and (min-width: $large) {
+                    float: none;
+                }
+
+                label{
+                    float: right;
+                    @media screen and (min-width: $large) {
+                        float: none;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+.invisible{
+    display: none;
+}

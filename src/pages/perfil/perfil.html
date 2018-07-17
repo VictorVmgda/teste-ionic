@@ -1,0 +1,24 @@
+<ion-content padding>
+
+  <main>
+    <figure>
+      <img [src]="usuario.foto" alt="Foto indefinida">
+    </figure>
+    
+    <div class="perfil-info">
+      
+      <ion-item text-center>
+          <h2>Nome: {{ usuario.nome }}</h2>
+          <p>E-mail: {{ usuario.email }} </p>
+      </ion-item>
+    
+      <button ion-button block *ngIf="myAcc == true" color="danger" type="button" (click)="deletarConta()">
+        <ion-icon name="trash"></ion-icon>
+        <span style="margin-left: 2vw;">Deletar Conta</span>
+      </button>
+  
+    </div>
+  </main>
+
+
+</ion-content>

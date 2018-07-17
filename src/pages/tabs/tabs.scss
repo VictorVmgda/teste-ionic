@@ -1,0 +1,25 @@
+page-tabs {
+    ion-tabs{
+        z-index: 1000;
+        display: block;
+
+        ion-tab{
+            
+            @media screen and (min-width: $large) {
+                margin-top: 7vh; 
+            }
+
+        }
+
+        div.tabbar{
+
+            @media screen and (min-width: $large) {
+                top: 0px;
+                position: fixed;
+                height: 7vh;
+            }
+        }
+
+
+    }
+}

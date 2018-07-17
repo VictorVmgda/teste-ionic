@@ -1,0 +1,27 @@
+page-home {
+
+    h2{
+        @include titlePage();
+    }
+
+    form{
+
+        @media screen and (min-width: $large) {
+            @include formDataPage();
+        }
+
+    }
+
+    div.cadastrar{
+        margin: 0 auto;
+        margin-top: 30vh;
+        text-align: center;
+        width: 90%;
+
+        @media screen and (min-width: $large) {
+            width: 100%;
+        }
+
+    }
+
+}

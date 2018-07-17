@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      Ion Projeto
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h2 text-center>Bem-Vindo</h2>
+
+  <form (ngSubmit)="efetuaLogin()">
+    <ion-item>
+      <ion-label floating>E-mail: </ion-label>
+      <ion-input type="text" name="email" [(ngModel)]="usuario.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Senha: </ion-label>
+      <ion-input type="password" name="senha" [(ngModel)]="usuario.senha"></ion-input>
+    </ion-item>
+
+    <button ion-button type="submit" block color="dark">Logar</button>
+  </form>
+
+  <div class="cadastrar">
+    <h6>Ainda não tem uma conta?</h6>
+    <span>Faça seu <a (click)="irCadastro()">cadastre-se</a>.</span>
+  </div>
+
+</ion-content>
